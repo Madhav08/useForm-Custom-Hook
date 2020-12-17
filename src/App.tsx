@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyles from './globalStyles';
+import { Form, InputField, MainHeading, SubmitButton } from './styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Form>
+        <MainHeading>SignUp!</MainHeading>
+        <InputField type='text' name='name' placeholder='Enter Your Name' />
+        <InputField type='email' name='email' placeholder='Enter Your Email' />
+        <InputField
+          type='password'
+          name='password'
+          placeholder='Enter Password'
+        />
+        <InputField
+          type='password'
+          name='name'
+          placeholder='Re-Enter Password'
+        />
+        <SubmitButton type='submit' value='SIGNUP!' />
+      </Form>
+    </>
   );
 }
 
