@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  background: #1773c9;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
   padding: 1.4rem;
   display: flex;
   flex-direction: column;
   width: 400px;
   margin: 5rem auto;
   border-radius: 16px;
-  box-shadow: 4px 4px 8px #1773c9;
+  box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.15);
+
+  @media (max-width: 768px) {
+    width: 300px;
+  } ;
 `;
 
 export const InputField = styled.input`
@@ -20,6 +25,10 @@ export const InputField = styled.input`
   outline: none;
   border: 2px solid #171273;
   border-radius: 8px;
+
+  @media (max-width: 768px) {
+    width: 230px;
+  }
 `;
 
 export const SubmitButton = styled.input.attrs({
@@ -40,6 +49,10 @@ export const SubmitButton = styled.input.attrs({
   &:hover {
     background: #1d1881;
   }
+
+  @media (max-width: 768px) {
+    width: 230px;
+  }
 `;
 
 export const MainHeading = styled.h3`
@@ -47,4 +60,10 @@ export const MainHeading = styled.h3`
   font-weight: bold;
   color: #ffff;
   margin: 3.8px auto;
+`;
+
+export const ErrorText = styled.p`
+  color: #d60d0d;
+  font-size: 1.1rem;
+  margin-left: 15px;
 `;

@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: #171273;
+    background: url('https://source.unsplash.com/random/1380*1500');
     margin: 0;
     padding: 0;
-    font-family: Open-Sans, Helvetica, Sans-Serif;
+    font-family: Helvetica, Sans-Serif;
   }
 `;
 
